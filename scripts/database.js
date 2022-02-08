@@ -8,14 +8,14 @@ const database = {
         {id: 4, color:  "Spring-Green", price: 800 }
     ],
 
-    interior: [
+    interiors: [
         {id: 1, color: "Beige", type: "fabric", price: 1000},
         {id: 1, color: "Charcoal", type: "fabric", price: 1000},
         {id: 1, color: "White", type: "leather", price: 2000},
         {id: 1, color: "Black", type: "leather", price: 2000},
     ],
 
-    technology: [
+    technologies: [
         {id: 1, package: "Basic", price: 1000},
         {id: 2, package: "Navigation", price: 2000},
         {id: 3, package: "Visibility", price: 3000},
@@ -37,6 +37,30 @@ const database = {
             technologyId: 1,
             wheelsId: 1,
 
-        }
+        },
+
     ]
 }
+
+
+export const getColors = () => {
+    return database.colors.map(color => ({...metal}))
+}
+
+export const getInteriors = () => {
+    return database.interiors.map(interior => ({...interior}))
+}
+
+export const getTechs = () => {
+    return database.technologies.map(technology => ({...technology}))
+}
+
+export const getWheels = () => {
+    return database.wheels.map(wheel => ({...wheel}))
+}
+
+export const getOrders = () => {
+    return database.customOrders.map(order ({...order}))
+}
+
+
