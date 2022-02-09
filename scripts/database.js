@@ -44,7 +44,7 @@ const database = {
 
 
 export const getColors = () => {
-    return database.colors.map(color => ({...metal}))
+    return database.colors.map(color => ({...color}))
 }
 
 export const getInteriors = () => {

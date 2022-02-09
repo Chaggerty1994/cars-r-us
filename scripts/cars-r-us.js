@@ -1,5 +1,5 @@
 
-
+import { CarColors } from "./colors.js"
 
 
 export const CarsRUs = () => {
@@ -9,7 +9,7 @@ export const CarsRUs = () => {
         <article class="choices">
             <section class="choices__color options">
                 <h2>Colors</h2>
-                
+                ${CarColors()}
             </section>
             <section class="choices__interior options">
                 <h2>Interiors</h2>
