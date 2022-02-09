@@ -1,7 +1,16 @@
-import { getTechs } from "./database.js";
+import { getTechs, setTech } from "./database.js";
 
 
 const techs = getTechs()
+
+document.addEventListener(
+    "change",
+    (event) => {
+        if (event.target.id === "tech") {
+            setTech(parseInt(event.target.value))
+        }
+    }
+)
 
 
 export const carTechs = () => {
