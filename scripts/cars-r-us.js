@@ -3,9 +3,18 @@ import { CarColors } from "./colors.js"
 import { CarInteriors } from "./interiors.js"
 import { carTechs } from "./technology.js"
 import { CarWheels } from "./wheels.js"
+import { Orders } from "./orders.js"
+import { addCustomOrder } from "./database.js"
 
-
-
+document.addEventListener(
+    "click",
+    (event) => {
+        if (event.target.id === "orderButton") {
+            addCustomOrder()
+        }
+        
+    }
+)
 
 
 export const CarsRUs = () => {
@@ -33,13 +42,13 @@ export const CarsRUs = () => {
 
         <article>
             <h2></h2>
-            <button id="orderButton">Create Custom Order</button>
+            <button id="orderButton">Create A MFIN Custom Order</button>
             
         </article>
 
         <article class="customOrders">
             <h2>Custom Orders</h2>
-            
+            ${Orders()}
         </article>
     `
 }

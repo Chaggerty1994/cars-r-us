@@ -23,10 +23,14 @@ export const CarWheels = () => {
 
     const listItems = wheels.map(wheel => {
 
-
+        if (wheel.color) {
         return `
         <option value="${wheel.id}"> ${wheel.color} ${wheel.type} ${wheel.size} </option>
-        `
+        ` } else {
+            
+            return `<option value="${wheel.id}"> ${wheel.type} ${wheel.size} </option>`
+
+        }
     })
 
     html += listItems.join("")
